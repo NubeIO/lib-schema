@@ -1,9 +1,24 @@
 # Binaries for programs and plugins
+backend/.idea/
+frontend/.idea/
+.idea/
+*idea/
+../.idea/
+### VisualStudioCode ###
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+# Binaries for programs and plugins
 *.exe
 *.exe~
 *.dll
 *.so
 *.dylib
+*.log
+*.db
 
 # Test binary, built with `go test -c`
 *.test
