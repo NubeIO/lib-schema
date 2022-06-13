@@ -25,10 +25,11 @@ type NameStruct struct {
 type Device struct {
 	Name        NameStruct `json:"name"`
 	AddressUUID struct {
+		Title       string `json:"title" default:"name"`
 		Type        string `json:"type" default:"string"`
 		Required    bool   `json:"required" default:"true"`
-		Min         int    `json:"min" default:"8"`
-		Max         int    `json:"max" default:"8"`
+		Min         int    `json:"minLength" default:"8"`
+		Max         int    `json:"maxLength" default:"8"`
 		DisplayName string `json:"display_name" default:"Address UUID"`
 	} `json:"address_uuid"`
 	SerialBaudRate struct {
