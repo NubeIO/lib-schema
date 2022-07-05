@@ -95,22 +95,22 @@ type AutoMappingNetworksSelection struct {
 	Title    string   `json:"title" default:"auto mapping"`
 	Options  []string `json:"enum" default:"[\"disable\",\"self-mapping\"]"`
 	EnumName []string `json:"enumNames" default:"[\"disable\",\"self-mapping\"]"`
+	Default  string   `json:"default" default:"disable"`
 }
 
 type AutoMappingFlowNetworkName struct {
 	Type    string `json:"type" default:"string"`
 	Title   string `json:"title" default:"auto mapping name"`
-	Min     int    `json:"minLength" default:"1"`
-	Max     int    `json:"maxLength" default:"100"`
+	Min     int    `json:"minLength" default:"0"`
+	Max     int    `json:"maxLength" default:"200"`
 	Default string `json:"default" default:"local"`
 }
 
 type AutoMappingFlowNetworkUUID struct {
-	Type    string `json:"type" default:"string"`
-	Title   string `json:"title" default:"auto mapping uuid"`
-	Min     int    `json:"minLength" default:"1"`
-	Max     int    `json:"maxLength" default:"100"`
-	Default string `json:"default" default:"local"`
+	Type  string `json:"type" default:"string"`
+	Title string `json:"title" default:"auto mapping uuid"`
+	Min   int    `json:"minLength" default:"0"`
+	Max   int    `json:"maxLength" default:"80"`
 }
 
 type AutoMappingEnableHistories struct {
