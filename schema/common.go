@@ -84,3 +84,36 @@ type Port struct {
 	Default int    `json:"default" default:"1662"`
 	Help    string `json:"help" default:"ip port, eg port 8080 192.168.15.10:8080"`
 }
+
+type PluginName struct {
+	Type  string `json:"type" default:"string"`
+	Title string `json:"title" default:"plugin"`
+}
+
+type AutoMappingNetworksSelection struct {
+	Type     string   `json:"type" default:"string"`
+	Title    string   `json:"title" default:"auto mapping"`
+	Options  []string `json:"enum" default:"[\"disable\",\"self-mapping\"]"`
+	EnumName []string `json:"enumNames" default:"[\"disable\",\"self-mapping\"]"`
+}
+
+type AutoMappingFlowNetworkName struct {
+	Type    string `json:"type" default:"string"`
+	Title   string `json:"title" default:"auto mapping name"`
+	Min     int    `json:"minLength" default:"1"`
+	Max     int    `json:"maxLength" default:"100"`
+	Default string `json:"default" default:"local"`
+}
+
+type AutoMappingFlowNetworkUUID struct {
+	Type    string `json:"type" default:"string"`
+	Title   string `json:"title" default:"auto mapping uuid"`
+	Min     int    `json:"minLength" default:"1"`
+	Max     int    `json:"maxLength" default:"100"`
+	Default string `json:"default" default:"local"`
+}
+
+type AutoMappingEnableHistories struct {
+	Type  string `json:"type" default:"boolean"`
+	Title string `json:"title" default:"auto mapping enable histories"`
+}
