@@ -40,6 +40,7 @@ type Interface struct {
 	Type    string   `json:"type" default:"string"`
 	Title   string   `json:"title" default:"interface"`
 	Options []string `json:"enum" default:"[]"`
+	Default int      `json:"default" default:"eth0"`
 	Help    string   `json:"help" default:"host network interface card, eg eth0"`
 }
 
