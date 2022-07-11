@@ -36,9 +36,9 @@ type Enable struct {
 	Title string `json:"title" default:"enable"`
 }
 
-type Interface struct {
+type NetworkInterface struct {
 	Type    string   `json:"type" default:"string"`
-	Title   string   `json:"title" default:"interface"`
+	Title   string   `json:"title" default:"network interface"`
 	Options []string `json:"enum" default:"[]"`
 	Default string   `json:"default" default:"eth0"`
 	Help    string   `json:"help" default:"host network interface card, eg eth0"`
