@@ -36,20 +36,20 @@ type Enable struct {
 	Title string `json:"title" default:"enable"`
 }
 
-type Interface struct {
-	Type    string   `json:"type" default:"string"`
-	Title   string   `json:"title" default:"network interface"`
-	Options []string `json:"enum" default:"[]"`
-	Default string   `json:"default" default:"eth0"`
-	Help    string   `json:"help" default:"host network interface card, eg eth0"`
-}
-
 type Product struct {
 	Type     string   `json:"type" default:"string"`
 	Title    string   `json:"title" default:"product"`
 	Options  []string `json:"enum" default:"[\"RubixCompute\",\"RubixCompute5\",\"RubixComputeIO\",\"Edge28\",\"Nuc\",\"AllLinux\"]"`
 	EnumName []string `json:"enumNames" default:"[\"RubixCompute\",\"RubixCompute5\",\"RubixComputeIO\",\"Edge28\",\"Nuc\",\"AllLinux\"]"`
 	Help     string   `json:"help" default:"a nube product type or a general linux server"`
+}
+
+type Interface struct {
+	Type    string   `json:"type" default:"string"`
+	Title   string   `json:"title" default:"network interface"`
+	Options []string `json:"enum" default:"[]"`
+	Default string   `json:"default" default:"eth0"`
+	Help    string   `json:"help" default:"host network interface card, eg eth0"`
 }
 
 type IP struct {
