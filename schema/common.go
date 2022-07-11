@@ -36,7 +36,7 @@ type Enable struct {
 	Title string `json:"title" default:"enable"`
 }
 
-type NetworkInterface struct {
+type Interface struct {
 	Type    string   `json:"type" default:"string"`
 	Title   string   `json:"title" default:"network interface"`
 	Options []string `json:"enum" default:"[]"`
