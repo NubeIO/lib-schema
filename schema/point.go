@@ -29,3 +29,19 @@ type WritePriority struct {
 	EnumName []string `json:"enumNames" default:"[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]"`
 	Default  int      `json:"default" default:"16"`
 }
+
+type IoNumber struct {
+	Type     string   `json:"type" default:"string"`
+	Title    string   `json:"title" default:"io number"`
+	Options  []string `json:"enum" default:"[\"UI1\",\"UI2\",\"UI3\",\"UI4\",\"UI5\",\"UI6\",\"UI7\",\"UI8\",\"UO1\",\"UO2\",\"UO3\",\"UO4\",\"UO5\",\"UO6\",\"DO1\",\"DO2\"]"`
+	EnumName []string `json:"enumNames" default:"[\"UI1\",\"UI2\",\"UI3\",\"UI4\",\"UI5\",\"UI6\",\"UI7\",\"UI8\",\"UO1\",\"UO2\",\"UO3\",\"UO4\",\"UO5\",\"UO6\",\"DO1\",\"DO2\"]"`
+	Default  string   `json:"default" default:"UI1"`
+}
+
+type IoType struct {
+	Type     string   `json:"type" default:"string"`
+	Title    string   `json:"title" default:"io type"`
+	Options  []string `json:"enum" default:"[\"digital\",\"voltage_dc\",\"thermistor_10k_type_2\",\"current\",\"raw\"]"`
+	EnumName []string `json:"enumNames" default:"[\"digital\",\"voltage_dc\",\"thermistor_10k_type_2\",\"current\",\"raw\"]"`
+	Default  string   `json:"default" default:"digital"`
+}

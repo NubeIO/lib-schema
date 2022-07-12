@@ -12,6 +12,12 @@ type DeviceObjectId struct {
 	Default int    `json:"default" default:"1"`
 }
 
+type AddressId struct {
+	Type    string `json:"type" default:"number"`
+	Title   string `json:"title" default:"address id"`
+	Default int    `json:"default" default:"1"`
+}
+
 type NetworkNumber struct {
 	Type    string `json:"type" default:"number"`
 	Title   string `json:"title" default:"network number"`
