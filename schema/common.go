@@ -39,8 +39,8 @@ type Enable struct {
 type Product struct {
 	Type     string   `json:"type" default:"string"`
 	Title    string   `json:"title" default:"product"`
-	Options  []string `json:"enum" default:"[\"RubixCompute\",\"RubixCompute5\",\"RubixComputeIO\",\"Edge28\",\"Nuc\",\"AllLinux\"]"`
-	EnumName []string `json:"enumNames" default:"[\"RubixCompute\",\"RubixCompute5\",\"RubixComputeIO\",\"Edge28\",\"Nuc\",\"AllLinux\"]"`
+	Options  []string `json:"enum" default:"[\"RubixCompute\",\"RubixCompute5\",\"RubixComputeIO\",\"Edge28\",\"Nuc\",\"Server\"]"`
+	EnumName []string `json:"enumNames" default:"[\"RubixCompute\",\"RubixCompute5\",\"RubixComputeIO\",\"Edge28\",\"Nuc\",\"Server\"]"`
 	Help     string   `json:"help" default:"a nube product type or a general linux server"`
 }
 
