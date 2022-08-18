@@ -6,11 +6,27 @@ type UUID struct {
 	ReadOnly bool   `json:"readOnly" default:"true"`
 }
 
+type AddressUUID struct {
+	Type    string `json:"type" default:"string"`
+	Title   string `json:"title" default:"address uuid"`
+	Min     int    `json:"minLength" default:"1"`
+	Max     int    `json:"maxLength" default:"100"`
+	Default string `json:"default" default:""`
+}
+
 type Name struct {
 	Type  string `json:"type" default:"string"`
 	Title string `json:"title" default:"name"`
 	Min   int    `json:"minLength" default:"2"`
-	Max   int    `json:"maxLength" default:"50"`
+	Max   int    `json:"maxLength" default:"200"`
+}
+
+type Model struct {
+	Type     string   `json:"type" default:"string"`
+	Title    string   `json:"title" default:"model"`
+	Options  []string `json:"enum" default:"[]"`
+	EnumName []string `json:"enumNames" default:"[]"`
+	Default  string   `json:"default" default:""`
 }
 
 type Username struct {
@@ -32,8 +48,9 @@ type Description struct {
 }
 
 type Enable struct {
-	Type  string `json:"type" default:"boolean"`
-	Title string `json:"title" default:"enable"`
+	Type    string `json:"type" default:"boolean"`
+	Title   string `json:"title" default:"enable"`
+	Default bool   `json:"default" default:"true"`
 }
 
 type Product struct {
@@ -52,12 +69,12 @@ type Interface struct {
 	Help    string   `json:"help" default:"host network interface card, eg eth0"`
 }
 
-type IP struct {
-	Type    string `json:"type" default:"string"`
-	Title   string `json:"title" default:"ip address"`
-	Default string `json:"default" default:"192.168.15.10"`
-	Help    string `json:"help" default:"ip address, eg 192.168.15.10 or nube-io.com (https:// is not needed in front of the address)"`
-}
+//type IP struct {
+//	Type    string `json:"type" default:"string"`
+//	Title   string `json:"title" default:"ip address"`
+//	Default string `json:"default" default:"0.0.0.0"`
+//	Help    string `json:"help" default:"ip address, eg 192.168.15.10 or nube-io.com (https:// is not needed in front of the address)"`
+//}
 
 type Netmask struct {
 	Type    string `json:"type" default:"string"`
@@ -82,8 +99,8 @@ type Port struct {
 	Title   string `json:"title" default:"port"`
 	Min     int    `json:"minLength" default:"2"`
 	Max     int    `json:"maxLength" default:"65535"`
-	Default int    `json:"default" default:"1662"`
-	Help    string `json:"help" default:"ip port, eg port 8080 192.168.15.10:8080"`
+	Default int    `json:"default" default:"1660"`
+	Help    string `json:"help" default:"ip port, eg port 1660 192.168.15.10:1660"`
 }
 
 type PluginName struct {
@@ -94,8 +111,8 @@ type PluginName struct {
 type AutoMappingNetworksSelection struct {
 	Type     string   `json:"type" default:"string"`
 	Title    string   `json:"title" default:"auto mapping"`
-	Options  []string `json:"enum" default:"[\"disable\",\"self-mapping\"]"`
-	EnumName []string `json:"enumNames" default:"[\"disable\",\"self-mapping\"]"`
+	Options  []string `json:"enum" default:"[\"disable\",\"self-mapping\",\"bacnet\"]"`
+	EnumName []string `json:"enumNames" default:"[\"disable\",\"self-mapping\",\"bacnet\"]"`
 	Default  string   `json:"default" default:"disable"`
 }
 

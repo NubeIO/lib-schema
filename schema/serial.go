@@ -14,6 +14,7 @@ type SerialPort struct {
 	Options  []string `json:"enum" default:"[\"/dev/ttyAMA0\",\"/dev/ttyRS485-1\",\"/dev/ttyRS485-2\",\"/data/socat/loRa1\",\"/dev/ttyUSB0\",\"/dev/ttyUSB1\",\"/dev/ttyUSB2\",\"/dev/ttyUSB3\",\"/dev/ttyUSB4\",\"/data/socat/loRa1\",\"/data/socat/serialBridge1\"]"`
 	EnumName []string `json:"enumNames" default:"[\"/dev/ttyAMA0\",\"/dev/ttyRS485-1\",\"/dev/ttyRS485-2\",\"/data/socat/loRa1\",\"/dev/ttyUSB0\",\"/dev/ttyUSB1\",\"/dev/ttyUSB2\",\"/dev/ttyUSB3\",\"/dev/ttyUSB4\",\"/data/socat/loRa1\",\"/data/socat/serialBridge1\"]"`
 	Default  string   `json:"default" default:"/dev/ttyAMA0"`
+	ReadOnly bool     `json:"readOnly" default:"false"`
 }
 
 type SerialBaudRate struct {
@@ -21,7 +22,8 @@ type SerialBaudRate struct {
 	Title    string   `json:"title" default:"serial baud rate"`
 	Options  []string `json:"enum" default:"[9600, 38400, 57600, 115200]"`
 	EnumName []string `json:"enumNames" default:"[9600, 38400, 57600, 115200]"`
-	Default  int      `json:"default" default:"38400"`
+	//Default  int      `json:"default" default:"38400"`
+	ReadOnly bool `json:"readOnly" default:"false"`
 }
 
 type SerialParity struct {
@@ -30,6 +32,7 @@ type SerialParity struct {
 	Options  []string `json:"enum" default:"[\"odd\",\"even\",\"none\"]"`
 	EnumName []string `json:"enumNames" default:"[\"odd\",\"even\",\"none\"]"`
 	Default  string   `json:"default" default:"none"`
+	ReadOnly bool     `json:"readOnly" default:"false"`
 }
 
 type SerialDataBits struct {
@@ -38,6 +41,7 @@ type SerialDataBits struct {
 	Options  []string `json:"enum" default:"[7, 8]"`
 	EnumName []string `json:"enumNames" default:"[7, 8]"`
 	Default  int      `json:"default" default:"8"`
+	ReadOnly bool     `json:"readOnly" default:"false"`
 }
 type SerialStopBits struct {
 	Type     string   `json:"type" default:"number"`
@@ -45,6 +49,7 @@ type SerialStopBits struct {
 	Options  []string `json:"enum" default:"[1, 2]"`
 	EnumName []string `json:"enumNames" default:"[1, 2]"`
 	Default  int      `json:"default" default:"1"`
+	ReadOnly bool     `json:"readOnly" default:"false"`
 }
 
 type SerialTimeout struct {

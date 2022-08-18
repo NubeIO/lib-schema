@@ -3,7 +3,7 @@ package schema
 type Host struct {
 	Type    string `json:"type" default:"string"`
 	Title   string `json:"title" default:"host ip address"`
-	Default string `json:"default" default:"192.168.15.10"`
+	Default string `json:"default" default:"0.0.0.0"`
 }
 
 type DeviceObjectId struct {
