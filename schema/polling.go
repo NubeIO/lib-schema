@@ -1,5 +1,21 @@
 package schema
 
+type PollPriority struct {
+	Type     string   `json:"type" default:"string"`
+	Title    string   `json:"title" default:"poll priority"`
+	Options  []string `json:"enum" default:"[\"high\",\"normal\",\"low\"]"`
+	EnumName []string `json:"enumNames" default:"[\"high\",\"normal\",\"low\"]"`
+	Default  string   `json:"default" default:"normal"`
+}
+
+type PollRate struct {
+	Type     string   `json:"type" default:"string"`
+	Title    string   `json:"title" default:"poll rate"`
+	Options  []string `json:"enum" default:"[\"fast\",\"normal\",\"slow\"]"`
+	EnumName []string `json:"enumNames" default:"[\"fast\",\"normal\",\"slow\"]"`
+	Default  string   `json:"default" default:"normal"`
+}
+
 type FastPollRate struct {
 	Type    string `json:"type" default:"number"`
 	Title   string `json:"title" default:"fast poll rate (seconds)"`
