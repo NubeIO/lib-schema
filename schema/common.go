@@ -69,13 +69,6 @@ type Interface struct {
 	Help    string   `json:"help" default:"host network interface card, eg eth0"`
 }
 
-//type IP struct {
-//	Type    string `json:"type" default:"string"`
-//	Title   string `json:"title" default:"ip address"`
-//	Default string `json:"default" default:"0.0.0.0"`
-//	Help    string `json:"help" default:"ip address, eg 192.168.15.10 or nube-io.com (https:// is not needed in front of the address)"`
-//}
-
 type Netmask struct {
 	Type    string `json:"type" default:"string"`
 	Title   string `json:"title" default:"netmask"`

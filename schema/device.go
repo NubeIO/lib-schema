@@ -17,6 +17,14 @@ type AddressId struct {
 	Type    string `json:"type" default:"number"`
 	Title   string `json:"title" default:"address id"`
 	Default int    `json:"default" default:"1"`
+	Min     int    `json:"minLength" default:"0"`
+	Max     int    `json:"maxLength" default:"255"`
+}
+
+type AddressLength struct {
+	Type    string `json:"type" default:"number"`
+	Title   string `json:"title" default:"address length"`
+	Default int    `json:"default" default:"1"`
 }
 
 type NetworkNumber struct {

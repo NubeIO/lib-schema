@@ -46,12 +46,6 @@ type IoType struct {
 	Default  string   `json:"default" default:"digital"`
 }
 
-//type Enable struct {
-//	Type    string `json:"type" default:"boolean"`
-//	Title   string `json:"title" default:"enable"`
-//	Default bool   `json:"default" default:"true"`
-//}
-
 type ScaleEnable struct {
 	Type  string `json:"type" default:"boolean"`
 	Title string `json:"title" default:"scale enable"`
@@ -81,46 +75,3 @@ type ScaleOutMax struct {
 	Title   string  `json:"title" default:"scale: output max"`
 	Default float64 `json:"default" default:"0"`
 }
-
-//ScaleEnable struct {
-//Type        string `json:"type" default:"bool"`
-//Required    bool   `json:"required" default:"true"`
-//Default     *bool  `json:"default" default:"false"`
-//DisplayName string `json:"display_name" default:"Scale/Limit Enable"`
-//} `json:"scale_enable"`
-//ScaleInMin struct {
-//Type        string `json:"type" default:"float"`
-//Required    bool   `json:"required" default:"false"`
-//Default     string `json:"default" default:"0"`
-//DisplayName string `json:"display_name" default:"Scale: Input Min"`
-//} `json:"scale_in_min"`
-//ScaleInMax struct {
-//Type        string `json:"type" default:"float"`
-//Required    bool   `json:"required" default:"false"`
-//Default     string `json:"default" default:"0"`
-//DisplayName string `json:"display_name" default:"Scale: Input Max"`
-//} `json:"scale_in_max"`
-//ScaleOutMin struct {
-//Type        string `json:"type" default:"float"`
-//Required    bool   `json:"required" default:"false"`
-//Default     string `json:"default" default:"0"`
-//DisplayName string `json:"display_name" default:"Scale/Limit: Output Min"`
-//} `json:"scale_out_min"`
-//ScaleOutMax struct {
-//Type        string `json:"type" default:"float"`
-//Required    bool   `json:"required" default:"false"`
-//Default     string `json:"default" default:"0"`
-//DisplayName string `json:"display_name" default:"Scale/Limit: Output Max"`
-//} `json:"scale_out_max"`
-//MultiplicationFactor struct {
-//Type        string `json:"type" default:"float"`
-//Required    bool   `json:"required" default:"false"`
-//Default     string `json:"default" default:"1"`
-//DisplayName string `json:"display_name" default:"Multiplication Factor"`
-//} `json:"multiplication_factor"`
-//Offset struct {
-//Type        string `json:"type" default:"float"`
-//Required    bool   `json:"required" default:"false"`
-//Default     string `json:"default" default:"0"`
-//DisplayName string `json:"display_name" default:"Offset"`
-//} `json:"offset"`

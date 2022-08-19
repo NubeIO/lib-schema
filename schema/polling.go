@@ -41,6 +41,6 @@ type MaxPollRate struct {
 }
 
 type ZeroMode struct {
-	Type  string `json:"type" default:"zero mode"`
-	Title string `json:"title" default:"enable"`
+	Type  string `json:"type" default:"boolean"`
+	Title string `json:"title" default:"zero mode"`
 }

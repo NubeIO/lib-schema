@@ -1,6 +1,6 @@
 package schema
 
-type TransportTypeStruct struct {
+type TransportType struct {
 	Type     string   `json:"type" default:"string"`
 	Title    string   `json:"title" default:"network transport type"`
 	Options  []string `json:"enum" default:"[\"serial\",\"ip\",\"LoRa\"]"`
