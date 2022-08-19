@@ -5,7 +5,7 @@ type DataType struct {
 	Title    string   `json:"title" default:"io type"`
 	Options  []string `json:"enum" default:"[\"digital\",\"uint16\",\"int16\",\"uint32\",\"int32\",\"uint64\",\"int64\",\"float32\",\"float64\"]"`
 	EnumName []string `json:"enumNames" default:"[\"digital\",\"uint16\",\"int16\",\"uint32\",\"int32\",\"uint64\",\"int64\",\"float32\",\"float64\"]"`
-	Default  string   `json:"default" default:"digital"`
+	Default  string   `json:"default" default:"uint16"`
 }
 
 type ObjectEncoding struct {

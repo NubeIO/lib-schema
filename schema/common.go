@@ -17,7 +17,7 @@ type AddressUUID struct {
 type Name struct {
 	Type  string `json:"type" default:"string"`
 	Title string `json:"title" default:"name"`
-	Min   int    `json:"minLength" default:"2"`
+	Min   int    `json:"minLength" default:"0"`
 	Max   int    `json:"maxLength" default:"200"`
 }
 

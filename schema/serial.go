@@ -18,12 +18,12 @@ type SerialPort struct {
 }
 
 type SerialBaudRate struct {
-	Type     string   `json:"type" default:"number"`
-	Title    string   `json:"title" default:"serial baud rate"`
-	Options  []string `json:"enum" default:"[9600, 38400, 57600, 115200]"`
-	EnumName []string `json:"enumNames" default:"[9600, 38400, 57600, 115200]"`
-	//Default  int      `json:"default" default:"38400"`
-	ReadOnly bool `json:"readOnly" default:"false"`
+	Type     string `json:"type" default:"number"`
+	Title    string `json:"title" default:"serial baud rate"`
+	Options  []int  `json:"enum" default:"[9600, 38400, 57600, 115200]"`
+	EnumName []int  `json:"enumNames" default:"[9600, 38400, 57600, 115200]"`
+	Default  int    `json:"default" default:"38400"`
+	ReadOnly bool   `json:"readOnly" default:"false"`
 }
 
 type SerialParity struct {
@@ -36,24 +36,24 @@ type SerialParity struct {
 }
 
 type SerialDataBits struct {
-	Type     string   `json:"type" default:"number"`
-	Title    string   `json:"title" default:"serial data bit"`
-	Options  []string `json:"enum" default:"[7, 8]"`
-	EnumName []string `json:"enumNames" default:"[7, 8]"`
-	Default  int      `json:"default" default:"8"`
-	ReadOnly bool     `json:"readOnly" default:"false"`
+	Type     string `json:"type" default:"number"`
+	Title    string `json:"title" default:"serial data bit"`
+	Options  []int  `json:"enum" default:"[7, 8]"`
+	EnumName []int  `json:"enumNames" default:"[7, 8]"`
+	Default  int    `json:"default" default:"8"`
+	ReadOnly bool   `json:"readOnly" default:"false"`
 }
 type SerialStopBits struct {
-	Type     string   `json:"type" default:"number"`
-	Title    string   `json:"title" default:"serial stop bit"`
-	Options  []string `json:"enum" default:"[1, 2]"`
-	EnumName []string `json:"enumNames" default:"[1, 2]"`
-	Default  int      `json:"default" default:"1"`
-	ReadOnly bool     `json:"readOnly" default:"false"`
+	Type     string `json:"type" default:"number"`
+	Title    string `json:"title" default:"serial stop bit"`
+	Options  []int  `json:"enum" default:"[1, 2]"`
+	EnumName []int  `json:"enumNames" default:"[1, 2]"`
+	Default  int    `json:"default" default:"1"`
+	ReadOnly bool   `json:"readOnly" default:"false"`
 }
 
 type SerialTimeout struct {
-	Type    string  `json:"type" default:"number"`
-	Title   string  `json:"title" default:"serial timeout"`
-	Default float64 `json:"default" default:"0.1"`
+	Type    string `json:"type" default:"number"`
+	Title   string `json:"title" default:"serial timeout"`
+	Default int    `json:"default" default:"1"`
 }

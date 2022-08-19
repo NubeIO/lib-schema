@@ -6,6 +6,14 @@ type ObjectId struct {
 	Default int    `json:"default" default:"1"`
 }
 
+type ObjectTypeModbus struct {
+	Type     string   `json:"type" default:"string"`
+	Title    string   `json:"title" default:"object type"`
+	Options  []string `json:"enum" default:"[\"read_coil\",\"write_coil\",\"read_discrete_input\",\"read_register\",\"read_holding\",\"write_holding\"]"`
+	EnumName []string `json:"enumNames"default:"[\"read_coil\",\"write_coil\",\"read_discrete_input\",\"read_register\",\"read_holding\",\"write_holding\"]"`
+	Default  string   `json:"default" default:"read_coil"`
+}
+
 type ObjectType struct {
 	Type     string   `json:"type" default:"string"`
 	Title    string   `json:"title" default:"object type"`
