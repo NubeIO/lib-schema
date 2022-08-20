@@ -6,6 +6,7 @@ type TransportType struct {
 	Options  []string `json:"enum" default:"[\"serial\",\"ip\",\"LoRa\"]"`
 	EnumName []string `json:"enumNames" default:"[\"serial\",\"ip\",\"LoRa\"]"`
 	Default  string   `json:"default" default:"serial"`
+	ReadOnly bool     `json:"readOnly" default:"false"`
 }
 
 type SerialPort struct {
@@ -53,7 +54,8 @@ type SerialStopBits struct {
 }
 
 type SerialTimeout struct {
-	Type    string `json:"type" default:"number"`
-	Title   string `json:"title" default:"serial timeout"`
-	Default int    `json:"default" default:"1"`
+	Type     string `json:"type" default:"number"`
+	Title    string `json:"title" default:"serial timeout"`
+	Default  int    `json:"default" default:"1"`
+	ReadOnly bool   `json:"readOnly" default:"false"`
 }
