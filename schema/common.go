@@ -117,6 +117,15 @@ type Netmask struct {
 	ReadOnly bool   `json:"readOnly" default:"false"`
 }
 
+type SubNetMask struct {
+	Type     string `json:"type" default:"number"`
+	Title    string `json:"title" default:"subnet mask"`
+	Min      int    `json:"minLength" default:"8"`
+	Max      int    `json:"maxLength" default:"30"`
+	Default  int    `json:"default" default:"24"`
+	ReadOnly bool   `json:"readOnly" default:"false"`
+}
+
 type Gateway struct {
 	Type     string `json:"type" default:"string"`
 	Title    string `json:"title" default:"gateway"`
