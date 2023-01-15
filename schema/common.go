@@ -91,6 +91,21 @@ type Enable struct {
 	ReadOnly bool   `json:"readOnly" default:"false"`
 }
 
+type AutoMappingEnable struct {
+	Type     string `json:"type" default:"boolean"`
+	Title    string `json:"title" default:"auto mapping enable"`
+	Default  bool   `json:"default" default:"false"`
+	ReadOnly bool   `json:"readOnly" default:"false"`
+}
+
+type AutoMappingFlowNetworkName struct {
+	Type     string   `json:"type" default:"string"`
+	Title    string   `json:"title" default:"auto mapping flow_network name"`
+	Options  []string `json:"enum" default:"[]"`
+	Help     string   `json:"help" default:"select flow networks"`
+	ReadOnly bool     `json:"readOnly" default:"false"`
+}
+
 type Product struct {
 	Type     string   `json:"type" default:"string"`
 	Title    string   `json:"title" default:"product"`
@@ -163,13 +178,13 @@ type AutoMappingNetworksSelection struct {
 	Default  string   `json:"default" default:"disable"`
 }
 
-type AutoMappingFlowNetworkName struct {
-	Type    string `json:"type" default:"string"`
-	Title   string `json:"title" default:"auto mapping name"`
-	Min     int    `json:"minLength" default:"0"`
-	Max     int    `json:"maxLength" default:"200"`
-	Default string `json:"default" default:"local"`
-}
+//type AutoMappingFlowNetworkName struct {
+//	Type    string `json:"type" default:"string"`
+//	Title   string `json:"title" default:"auto mapping name"`
+//	Min     int    `json:"minLength" default:"0"`
+//	Max     int    `json:"maxLength" default:"200"`
+//	Default string `json:"default" default:"local"`
+//}
 
 type AutoMappingFlowNetworkUUID struct {
 	Type  string `json:"type" default:"string"`
