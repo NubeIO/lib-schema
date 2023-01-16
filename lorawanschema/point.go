@@ -9,8 +9,8 @@ type PointSchema struct {
 	Enable      schema.Enable      `json:"enable"`
 }
 
-func GetPointSchema() *DeviceSchema {
-	m := &DeviceSchema{}
+func GetPointSchema() *PointSchema {
+	m := &PointSchema{}
 	schema.Set(m)
 	return m
 }
