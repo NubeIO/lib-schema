@@ -94,3 +94,24 @@ type ScaleOutMax struct {
 	Default  float64 `json:"default" default:"0"`
 	ReadOnly bool    `json:"readOnly" default:"false"`
 }
+
+type MultiplicationFactor struct {
+	Type     string  `json:"type" default:"number"`
+	Title    string  `json:"title" default:"multiplication factor"`
+	Default  float64 `json:"default" default:"0"`
+	ReadOnly bool    `json:"readOnly" default:"false"`
+}
+
+type Offset struct {
+	Type     string  `json:"type" default:"number"`
+	Title    string  `json:"title" default:"offset"`
+	Default  float64 `json:"default" default:"0"`
+	ReadOnly bool    `json:"readOnly" default:"false"`
+}
+
+type Fallback struct {
+	Type     string   `json:"type" default:"number"`
+	Title    string   `json:"title" default:"fallback"`
+	Default  *float64 `json:"default" default:""`
+	ReadOnly bool     `json:"readOnly" default:"false"`
+}
