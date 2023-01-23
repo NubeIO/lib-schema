@@ -17,11 +17,15 @@ type PointSchema struct {
 	Enable      schema.Enable      `json:"enable"`
 	ObjectId    schema.ObjectId    `json:"object_id"`
 	ObjectType  ObjectType         `json:"object_type"`
-	ScaleEnable schema.ScaleEnable `json:"scale_enable"`
-	ScaleInMin  schema.ScaleInMin  `json:"scale_in_min"`
-	ScaleInMax  schema.ScaleInMax  `json:"scale_in_max"`
-	ScaleOutMin schema.ScaleOutMin `json:"scale_out_min"`
-	ScaleOutMax schema.ScaleOutMax `json:"scale_out_max"`
+
+	ScaleEnable          schema.ScaleEnable          `json:"scale_enable"`
+	ScaleInMin           schema.ScaleInMin           `json:"scale_in_min"`
+	ScaleInMax           schema.ScaleInMax           `json:"scale_in_max"`
+	ScaleOutMin          schema.ScaleOutMin          `json:"scale_out_min"`
+	ScaleOutMax          schema.ScaleOutMax          `json:"scale_out_max"`
+	Offset               schema.Offset               `json:"offset"`
+	MultiplicationFactor schema.MultiplicationFactor `json:"multiplication_factor"`
+	Fallback             schema.Fallback             `json:"fallback"`
 }
 
 func GetPointSchema() *PointSchema {
