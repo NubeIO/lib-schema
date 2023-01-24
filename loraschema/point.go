@@ -7,6 +7,7 @@ type PointSchema struct {
 	Name        schema.Name        `json:"name"`
 	Description schema.Description `json:"description"`
 	Enable      schema.Enable      `json:"enable"`
+	IoType      schema.IoType      `json:"io_type"`
 
 	ScaleEnable          schema.ScaleEnable          `json:"scale_enable"`
 	ScaleInMin           schema.ScaleInMin           `json:"scale_in_min"`
@@ -20,6 +21,10 @@ type PointSchema struct {
 
 func GetPointSchema() *PointSchema {
 	m := &PointSchema{}
+
+	m.IoType.Default = "raw"
+	m.IoType.EnumName = []string{"raw", "thermistor_10k_type_2", "digital", "voltage_dc"}
+	m.IoType.Options = []string{"raw", "thermistor_10k_type_2", "digital", "voltage_dc"}
 	schema.Set(m)
 	return m
 }
