@@ -23,6 +23,7 @@ type PointSchema struct {
 	Offset               schema.Offset               `json:"offset"`
 	MultiplicationFactor schema.MultiplicationFactor `json:"multiplication_factor"`
 	Fallback             schema.Fallback             `json:"fallback"`
+	Decimal              schema.Decimal              `json:"decimal"`
 }
 
 func GetPointSchema() *PointSchema {

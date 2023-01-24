@@ -115,3 +115,10 @@ type Fallback struct {
 	Default  *float64 `json:"default" default:""`
 	ReadOnly bool     `json:"readOnly" default:"false"`
 }
+
+type Decimal struct {
+	Type     string  `json:"type" default:"number"`
+	Title    string  `json:"title" default:"decimal"`
+	Default  float64 `json:"default" default:"2"`
+	ReadOnly bool    `json:"readOnly" default:"false"`
+}
