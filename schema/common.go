@@ -18,7 +18,7 @@ type AddressUUID struct {
 type Name struct {
 	Type     string `json:"type" default:"string"`
 	Title    string `json:"title" default:"name"`
-	Min      int    `json:"minLength" default:"0"`
+	Min      int    `json:"minLength" default:"2"`
 	Max      int    `json:"maxLength" default:"200"`
 	ReadOnly bool   `json:"readOnly" default:"false"`
 }
@@ -35,7 +35,7 @@ type Model struct {
 type Username struct {
 	Type     string `json:"type" default:"string"`
 	Title    string `json:"title" default:"username"`
-	Min      int    `json:"minLength" default:"1"`
+	Min      int    `json:"minLength" default:"2"`
 	Max      int    `json:"maxLength" default:"50"`
 	Default  string `json:"default" default:"admin"`
 	ReadOnly bool   `json:"readOnly" default:"false"`
@@ -50,30 +50,6 @@ type Password struct {
 type Token struct {
 	Type     string `json:"type" default:"string"`
 	Title    string `json:"title" default:"token"`
-	Min      int    `json:"minLength" default:"0"`
-	Max      int    `json:"maxLength" default:"200"`
-	ReadOnly bool   `json:"readOnly" default:"false"`
-}
-
-type RubixAssistToken struct {
-	Type     string `json:"type" default:"string"`
-	Title    string `json:"title" default:"rubix-edge token"`
-	Min      int    `json:"minLength" default:"0"`
-	Max      int    `json:"maxLength" default:"200"`
-	ReadOnly bool   `json:"readOnly" default:"false"`
-}
-
-type RubixEdgeToken struct {
-	Type     string `json:"type" default:"string"`
-	Title    string `json:"title" default:"rubix-edge token"`
-	Min      int    `json:"minLength" default:"0"`
-	Max      int    `json:"maxLength" default:"200"`
-	ReadOnly bool   `json:"readOnly" default:"false"`
-}
-
-type FlowFrameworkToken struct {
-	Type     string `json:"type" default:"string"`
-	Title    string `json:"title" default:"flow-framework token"`
 	Min      int    `json:"minLength" default:"0"`
 	Max      int    `json:"maxLength" default:"200"`
 	ReadOnly bool   `json:"readOnly" default:"false"`
@@ -177,14 +153,6 @@ type AutoMappingNetworksSelection struct {
 	EnumName []string `json:"enumNames" default:"[\"disable\",\"self-mapping\",\"bacnet\"]"`
 	Default  string   `json:"default" default:"disable"`
 }
-
-//type AutoMappingFlowNetworkName struct {
-//	Type    string `json:"type" default:"string"`
-//	Title   string `json:"title" default:"auto mapping name"`
-//	Min     int    `json:"minLength" default:"0"`
-//	Max     int    `json:"maxLength" default:"200"`
-//	Default string `json:"default" default:"local"`
-//}
 
 type AutoMappingFlowNetworkUUID struct {
 	Type  string `json:"type" default:"string"`
