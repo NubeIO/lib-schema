@@ -2,7 +2,7 @@ package edge28schema
 
 import "github.com/NubeIO/lib-schema/schema"
 
-//Options  []string `json:"options"
+// Options  []string `json:"options"
 
 type IoNumber struct {
 	Type     string   `json:"type" default:"string"`
@@ -29,13 +29,16 @@ type ObjectType struct {
 }
 
 type PointSchema struct {
-	UUID        schema.UUID        `json:"uuid"`
-	Name        schema.Name        `json:"name"`
-	Description schema.Description `json:"description"`
-	Enable      schema.Enable      `json:"enable"`
-	IoNumber    IoNumber           `json:"io_number"`
-	IoType      IoType             `json:"io_type"`
-	//ObjectType  schema.ObjectType  `json:"object_type"`
+	UUID            schema.UUID            `json:"uuid"`
+	Name            schema.Name            `json:"name"`
+	Description     schema.Description     `json:"description"`
+	Enable          schema.Enable          `json:"enable"`
+	HistoryEnable   schema.HistoryEnable   `json:"history_enable"`
+	HistoryType     schema.HistoryType     `json:"history_type"`
+	HistoryInterval schema.HistoryInterval `json:"history_interval"`
+	IoNumber        IoNumber               `json:"io_number"`
+	IoType          IoType                 `json:"io_type"`
+	// ObjectType  schema.ObjectType  `json:"object_type"`
 	ScaleEnable          schema.ScaleEnable          `json:"scale_enable"`
 	ScaleInMin           schema.ScaleInMin           `json:"scale_in_min"`
 	ScaleInMax           schema.ScaleInMax           `json:"scale_in_max"`
