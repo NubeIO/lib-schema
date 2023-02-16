@@ -122,3 +122,21 @@ type Decimal struct {
 	Default  float64 `json:"default" default:"2"`
 	ReadOnly bool    `json:"readOnly" default:"false"`
 }
+
+type HistoryEnable struct {
+	Type    string `json:"type" default:"boolean"`
+	Title   string `json:"title" default:"history enable"`
+	Default bool   `json:"default" default:"false"`
+}
+
+type HistoryType struct {
+	Type    string   `json:"type" default:"string"`
+	Title   string   `json:"title" default:"history type"`
+	Options []string `json:"enum" default:"[\"COV\",\"INTERVAL\",\"COV_AND_INTERVAL\"]"`
+}
+
+type HistoryInterval struct {
+	Type    string `json:"type" default:"number"`
+	Title   string `json:"title" default:"history interval"`
+	Default *int   `json:"default" default:"0"`
+}

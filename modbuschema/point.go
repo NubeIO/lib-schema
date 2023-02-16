@@ -7,6 +7,9 @@ type PointSchema struct {
 	Name             schema.Name             `json:"name"`
 	Description      schema.Description      `json:"description"`
 	Enable           schema.Enable           `json:"enable"`
+	HistoryEnable    schema.HistoryEnable    `json:"history_enable"`
+	HistoryType      schema.HistoryType      `json:"history_type"`
+	HistoryInterval  schema.HistoryInterval  `json:"history_interval"`
 	ObjectTypeModbus schema.ObjectTypeModbus `json:"object_type"`
 	DataType         schema.DataType         `json:"data_type"`
 	WriteMode        schema.WriteMode        `json:"write_mode"`
