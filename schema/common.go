@@ -122,6 +122,7 @@ type Gateway struct {
 	Title    string `json:"title" default:"gateway"`
 	Help     string `json:"help" default:"ip gateway address eg, 192.168.15.1"`
 	ReadOnly bool   `json:"readOnly" default:"false"`
+	Default  string `json:"default" default:"192.168.15.1"`
 }
 
 type HTTPS struct {
