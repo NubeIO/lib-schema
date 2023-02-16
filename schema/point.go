@@ -133,10 +133,11 @@ type HistoryType struct {
 	Type    string   `json:"type" default:"string"`
 	Title   string   `json:"title" default:"history type"`
 	Options []string `json:"enum" default:"[\"COV\",\"INTERVAL\",\"COV_AND_INTERVAL\"]"`
+	Default string   `json:"default" default:"INTERVAL"`
 }
 
 type HistoryInterval struct {
 	Type    string `json:"type" default:"number"`
 	Title   string `json:"title" default:"history interval"`
-	Default *int   `json:"default" default:"0"`
+	Default *int   `json:"default" default:"15"`
 }
