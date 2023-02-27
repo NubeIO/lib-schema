@@ -17,6 +17,7 @@ type PointSchema struct {
 	AddressLength    schema.AddressLength    `json:"address_length"`
 	PollPriority     schema.PollPriority     `json:"poll_priority"`
 	PollRate         schema.PollRate         `json:"poll_rate"`
+	ObjectEncoding   schema.ObjectEncoding   `json:"object_encoding"`
 
 	ScaleEnable          schema.ScaleEnable          `json:"scale_enable"`
 	ScaleInMin           schema.ScaleInMin           `json:"scale_in_min"`

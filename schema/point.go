@@ -2,16 +2,16 @@ package schema
 
 type ObjectId struct {
 	Type     string `json:"type" default:"number"`
-	Title    string `json:"title" default:"object id"`
+	Title    string `json:"title" default:"Object ID"`
 	Default  int    `json:"default" default:"1"`
 	ReadOnly bool   `json:"readOnly" default:"false"`
 }
 
 type ObjectTypeModbus struct {
 	Type     string   `json:"type" default:"string"`
-	Title    string   `json:"title" default:"object type"`
+	Title    string   `json:"title" default:"Object Type"`
 	Options  []string `json:"enum" default:"[\"read_coil\",\"write_coil\",\"read_discrete_input\",\"read_register\",\"read_holding\",\"write_holding\"]"`
-	EnumName []string `json:"enumNames" default:"[\"read_coil\",\"write_coil\",\"read_discrete_input\",\"read_register\",\"read_holding\",\"write_holding\"]"`
+	EnumName []string `json:"enumNames" default:"[\"Read Coil\",\"Write Coil\",\"Read Discrete Input\",\"Read Input Register\",\"Read Holding Register\",\"Write Holding Register\"]"`
 	Default  string   `json:"default" default:"read_coil"`
 	ReadOnly bool     `json:"readOnly" default:"false"`
 }
@@ -20,14 +20,14 @@ type ObjectType struct {
 	Type     string   `json:"type" default:"string"`
 	Title    string   `json:"title" default:"object type"`
 	Options  []string `json:"enum" default:"[\"analog_input\",\"analog_value\",\"analog_output\",\"binary_input\",\"binary_value\",\"binary_output\",\"multi_state_input\",\"multi_state_value\",\"multi_state_output\"]"`
-	EnumName []string `json:"enumNames" default:"[\"analog input\",\"analog value\",\"analog output\",\"binary input\",\"binary value\",\"binary output\",\"multi state input\",\"multi state value\",\"multi state output\"]"`
+	EnumName []string `json:"enumNames" default:"[\"Analog Input (AI)\",\"Analog Value (AV)\",\"Analog Output (AO)\",\"Binary Input (BI)\",\"binary value (AI)\",\"Binary Output (BO)\",\"Multi State Input (MSI)\",\"Multi State Value (MSV)\",\"Multi State Output (MSO)\"]"`
 	Default  string   `json:"default" default:"analog_value"`
 	ReadOnly bool     `json:"readOnly" default:"false"`
 }
 
 type WriteMode struct {
 	Type     string   `json:"type" default:"string"`
-	Title    string   `json:"title" default:"write mode"`
+	Title    string   `json:"title" default:"Write Mode"`
 	Options  []string `json:"enum" default:"[\"read_only\",\"write_once\",\"write_once_read_once\",\"write_always\",\"write_once_then_read\",\"write_and_maintain\"]"`
 	EnumName []string `json:"enumNames" default:"[\"read only\",\"write once\",\"write once read once\",\"write always\",\"write once then read\",\"write and maintain\"]"`
 	Default  string   `json:"default" default:"read_only"`
@@ -36,7 +36,7 @@ type WriteMode struct {
 
 type WritePriority struct {
 	Type     string `json:"type" default:"number"`
-	Title    string `json:"title" default:"write priority"`
+	Title    string `json:"title" default:"Write Priority"`
 	Min      int    `json:"minLength" default:"1"`
 	Max      int    `json:"maxLength" default:"16"`
 	Default  int    `json:"default" default:"16"`
@@ -45,7 +45,7 @@ type WritePriority struct {
 
 type IoNumber struct {
 	Type     string   `json:"type" default:"string"`
-	Title    string   `json:"title" default:"io number"`
+	Title    string   `json:"title" default:"IO Number"`
 	Options  []string `json:"enum" default:"[\"UI1\",\"UI2\",\"UI3\",\"UI4\",\"UI5\",\"UI6\",\"UI7\",\"UI8\",\"UO1\",\"UO2\",\"UO3\",\"UO4\",\"UO5\",\"UO6\",\"DO1\",\"DO2\"]"`
 	EnumName []string `json:"enumNames" default:"[\"UI1\",\"UI2\",\"UI3\",\"UI4\",\"UI5\",\"UI6\",\"UI7\",\"UI8\",\"UO1\",\"UO2\",\"UO3\",\"UO4\",\"UO5\",\"UO6\",\"DO1\",\"DO2\"]"`
 	Default  string   `json:"default" default:"UI1"`
@@ -54,7 +54,7 @@ type IoNumber struct {
 
 type IoType struct {
 	Type     string   `json:"type" default:"string"`
-	Title    string   `json:"title" default:"io type"`
+	Title    string   `json:"title" default:"IO Type"`
 	Options  []string `json:"enum" default:"[\"digital\",\"voltage_dc\",\"thermistor_10k_type_2\",\"current\",\"raw\"]"`
 	EnumName []string `json:"enumNames" default:"[\"digital\",\"voltage_dc\",\"thermistor_10k_type_2\",\"current\",\"raw\"]"`
 	Default  string   `json:"default" default:"digital"`
@@ -63,81 +63,81 @@ type IoType struct {
 
 type ScaleEnable struct {
 	Type     string `json:"type" default:"boolean"`
-	Title    string `json:"title" default:"scale enable"`
+	Title    string `json:"title" default:"Scale Enable"`
 	ReadOnly bool   `json:"readOnly" default:"false"`
 }
 
 type ScaleInMin struct {
 	Type     string  `json:"type" default:"number"`
-	Title    string  `json:"title" default:"scale: input min"`
+	Title    string  `json:"title" default:"Scale: Input/Device Min"`
 	Default  float64 `json:"default" default:"0"`
 	ReadOnly bool    `json:"readOnly" default:"false"`
 }
 
 type ScaleInMax struct {
 	Type     string  `json:"type" default:"number"`
-	Title    string  `json:"title" default:"scale: input max"`
+	Title    string  `json:"title" default:"Scale: Input/Device Max"`
 	Default  float64 `json:"default" default:"0"`
 	ReadOnly bool    `json:"readOnly" default:"false"`
 }
 
 type ScaleOutMin struct {
 	Type     string  `json:"type" default:"number"`
-	Title    string  `json:"title" default:"scale: output min"`
+	Title    string  `json:"title" default:"Scale: Output/Point Min"`
 	Default  float64 `json:"default" default:"0"`
 	ReadOnly bool    `json:"readOnly" default:"false"`
 }
 
 type ScaleOutMax struct {
 	Type     string  `json:"type" default:"number"`
-	Title    string  `json:"title" default:"scale: output max"`
+	Title    string  `json:"title" default:"Scale: Output/Point Max"`
 	Default  float64 `json:"default" default:"0"`
 	ReadOnly bool    `json:"readOnly" default:"false"`
 }
 
 type MultiplicationFactor struct {
 	Type     string  `json:"type" default:"number"`
-	Title    string  `json:"title" default:"multiplication factor"`
-	Default  float64 `json:"default" default:"0"`
+	Title    string  `json:"title" default:"Multiplication Factor"`
+	Default  float64 `json:"default" default:"1"`
 	ReadOnly bool    `json:"readOnly" default:"false"`
 }
 
 type Offset struct {
 	Type     string  `json:"type" default:"number"`
-	Title    string  `json:"title" default:"offset"`
+	Title    string  `json:"title" default:"Offset"`
 	Default  float64 `json:"default" default:"0"`
 	ReadOnly bool    `json:"readOnly" default:"false"`
 }
 
 type Fallback struct {
 	Type     string   `json:"type" default:"number"`
-	Title    string   `json:"title" default:"fallback"`
+	Title    string   `json:"title" default:"Fallback"`
 	Default  *float64 `json:"default" default:""`
 	ReadOnly bool     `json:"readOnly" default:"false"`
 }
 
 type Decimal struct {
 	Type     string  `json:"type" default:"number"`
-	Title    string  `json:"title" default:"decimal"`
+	Title    string  `json:"title" default:"Round To Decimals"`
 	Default  float64 `json:"default" default:"2"`
 	ReadOnly bool    `json:"readOnly" default:"false"`
 }
 
 type HistoryEnable struct {
 	Type    string `json:"type" default:"boolean"`
-	Title   string `json:"title" default:"history enable"`
+	Title   string `json:"title" default:"History Enable"`
 	Default bool   `json:"default" default:"false"`
 }
 
 type HistoryType struct {
 	Type    string   `json:"type" default:"string"`
-	Title   string   `json:"title" default:"history type"`
+	Title   string   `json:"title" default:"History Yype"`
 	Options []string `json:"enum" default:"[\"COV\",\"INTERVAL\",\"COV_AND_INTERVAL\"]"`
 	Default string   `json:"default" default:"INTERVAL"`
 }
 
 type HistoryInterval struct {
 	Type    string `json:"type" default:"number"`
-	Title   string `json:"title" default:"history interval"`
+	Title   string `json:"title" default:"History Interval"`
 	Default *int   `json:"default" default:"15"`
 }

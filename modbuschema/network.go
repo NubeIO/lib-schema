@@ -17,6 +17,7 @@ type NetworkSchema struct {
 	SerialDataBits schema.SerialDataBits `json:"serial_data_bits"`
 	SerialStopBits schema.SerialStopBits `json:"serial_stop_bits"`
 	SerialTimeout  schema.SerialTimeout  `json:"serial_timeout"`
+	MaxPollRate    schema.MaxPollRate    `json:"max_poll_rate"`
 }
 
 func GetNetworkSchema() *NetworkSchema {

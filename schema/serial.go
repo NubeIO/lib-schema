@@ -2,7 +2,7 @@ package schema
 
 type TransportType struct {
 	Type     string   `json:"type" default:"string"`
-	Title    string   `json:"title" default:"network transport type"`
+	Title    string   `json:"title" default:"Network Transport Type"`
 	Options  []string `json:"enum" default:"[\"serial\",\"ip\",\"LoRa\"]"`
 	EnumName []string `json:"enumNames" default:"[\"serial\",\"ip\",\"LoRa\"]"`
 	Default  string   `json:"default" default:"serial"`
@@ -11,7 +11,7 @@ type TransportType struct {
 
 type SerialPort struct {
 	Type     string   `json:"type" default:"string"`
-	Title    string   `json:"title" default:"serial port"`
+	Title    string   `json:"title" default:"Serial Port"`
 	Options  []string `json:"enum" default:"[\"/dev/ttyAMA0\",\"/dev/ttyRS485-1\",\"/dev/ttyRS485-2\",\"/data/socat/loRa1\",\"/dev/ttyUSB0\",\"/dev/ttyUSB1\",\"/dev/ttyUSB2\",\"/dev/ttyUSB3\",\"/dev/ttyUSB4\",\"/data/socat/loRa1\",\"/data/socat/serialBridge1\"]"`
 	EnumName []string `json:"enumNames" default:"[\"/dev/ttyAMA0\",\"/dev/ttyRS485-1\",\"/dev/ttyRS485-2\",\"/data/socat/loRa1\",\"/dev/ttyUSB0\",\"/dev/ttyUSB1\",\"/dev/ttyUSB2\",\"/dev/ttyUSB3\",\"/dev/ttyUSB4\",\"/data/socat/loRa1\",\"/data/socat/serialBridge1\"]"`
 	Default  string   `json:"default" default:"/dev/ttyAMA0"`
@@ -20,7 +20,7 @@ type SerialPort struct {
 
 type SerialBaudRate struct {
 	Type     string `json:"type" default:"number"`
-	Title    string `json:"title" default:"serial baud rate"`
+	Title    string `json:"title" default:"Serial Baud Rate"`
 	Options  []int  `json:"enum" default:"[9600, 38400, 57600, 115200]"`
 	EnumName []int  `json:"enumNames" default:"[9600, 38400, 57600, 115200]"`
 	Default  int    `json:"default" default:"38400"`
@@ -29,7 +29,7 @@ type SerialBaudRate struct {
 
 type SerialParity struct {
 	Type     string   `json:"type" default:"string"`
-	Title    string   `json:"title" default:"serial parity"`
+	Title    string   `json:"title" default:"Serial Parity"`
 	Options  []string `json:"enum" default:"[\"odd\",\"even\",\"none\"]"`
 	EnumName []string `json:"enumNames" default:"[\"odd\",\"even\",\"none\"]"`
 	Default  string   `json:"default" default:"none"`
@@ -38,7 +38,7 @@ type SerialParity struct {
 
 type SerialDataBits struct {
 	Type     string `json:"type" default:"number"`
-	Title    string `json:"title" default:"serial data bit"`
+	Title    string `json:"title" default:"Serial Data Bit"`
 	Options  []int  `json:"enum" default:"[7, 8]"`
 	EnumName []int  `json:"enumNames" default:"[7, 8]"`
 	Default  int    `json:"default" default:"8"`
@@ -46,7 +46,7 @@ type SerialDataBits struct {
 }
 type SerialStopBits struct {
 	Type     string `json:"type" default:"number"`
-	Title    string `json:"title" default:"serial stop bit"`
+	Title    string `json:"title" default:"Serial Stop Bit"`
 	Options  []int  `json:"enum" default:"[1, 2]"`
 	EnumName []int  `json:"enumNames" default:"[1, 2]"`
 	Default  int    `json:"default" default:"1"`
@@ -55,7 +55,7 @@ type SerialStopBits struct {
 
 type SerialTimeout struct {
 	Type     string `json:"type" default:"number"`
-	Title    string `json:"title" default:"serial timeout"`
+	Title    string `json:"title" default:"Serial Timeout"`
 	Default  int    `json:"default" default:"1"`
 	ReadOnly bool   `json:"readOnly" default:"false"`
 }
