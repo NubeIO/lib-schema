@@ -17,3 +17,12 @@ type ObjectEncoding struct {
 	Default  string   `json:"default" default:"beb_lew"`
 	ReadOnly bool     `json:"readOnly" default:"false"`
 }
+
+type ObjectTypeModbus struct {
+	Type     string   `json:"type" default:"string"`
+	Title    string   `json:"title" default:"Object Type"`
+	Options  []string `json:"enum" default:"[\"coil\",\"discrete_input\",\"input_register\",\"holding_register\",\"read_coil\",\"write_coil\",\"read_discrete_input\",\"read_register\",\"read_holding\",\"write_holding\"]"`
+	EnumName []string `json:"enumNames" default:"[\"Coil\",\"Discrete Input\",\"Input Register\",\"Holding Register\",\"Read Coil\",\"Write Coil\",\"Read Discrete Input\",\"Read Input Register\",\"Read Holding Register\",\"Write Holding Register\"]"`
+	Default  string   `json:"default" default:"coil"`
+	ReadOnly bool     `json:"readOnly" default:"false"`
+}

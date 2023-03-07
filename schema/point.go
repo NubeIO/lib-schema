@@ -7,15 +7,6 @@ type ObjectId struct {
 	ReadOnly bool   `json:"readOnly" default:"false"`
 }
 
-type ObjectTypeModbus struct {
-	Type     string   `json:"type" default:"string"`
-	Title    string   `json:"title" default:"Object Type"`
-	Options  []string `json:"enum" default:"[\"read_coil\",\"write_coil\",\"read_discrete_input\",\"read_register\",\"read_holding\",\"write_holding\"]"`
-	EnumName []string `json:"enumNames" default:"[\"Read Coil\",\"Write Coil\",\"Read Discrete Input\",\"Read Input Register\",\"Read Holding Register\",\"Write Holding Register\"]"`
-	Default  string   `json:"default" default:"read_coil"`
-	ReadOnly bool     `json:"readOnly" default:"false"`
-}
-
 type ObjectType struct {
 	Type     string   `json:"type" default:"string"`
 	Title    string   `json:"title" default:"object type"`
@@ -131,7 +122,7 @@ type HistoryEnable struct {
 
 type HistoryType struct {
 	Type    string   `json:"type" default:"string"`
-	Title   string   `json:"title" default:"History Yype"`
+	Title   string   `json:"title" default:"History Type"`
 	Options []string `json:"enum" default:"[\"COV\",\"INTERVAL\",\"COV_AND_INTERVAL\"]"`
 	Default string   `json:"default" default:"INTERVAL"`
 }

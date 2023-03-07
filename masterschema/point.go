@@ -3,29 +3,32 @@ package masterschema
 import "github.com/NubeIO/lib-schema/schema"
 
 type PointSchema struct {
-	UUID            schema.UUID            `json:"uuid"`
-	Name            schema.Name            `json:"name"`
-	Description     schema.Description     `json:"description"`
-	Enable          schema.Enable          `json:"enable"`
-	HistoryEnable   schema.HistoryEnable   `json:"history_enable"`
-	HistoryType     schema.HistoryType     `json:"history_type"`
-	HistoryInterval schema.HistoryInterval `json:"history_interval"`
-	ObjectId        schema.ObjectId        `json:"object_id"`
-	ObjectType      schema.ObjectType      `json:"object_type"`
-	WriteMode       schema.WriteMode       `json:"write_mode"`
-	WritePriority   schema.WritePriority   `json:"write_priority"`
-	PollPriority    schema.PollPriority    `json:"poll_priority"`
-	PollRate        schema.PollRate        `json:"poll_rate"`
+	UUID        schema.UUID        `json:"uuid"`
+	Name        schema.Name        `json:"name"`
+	Description schema.Description `json:"description"`
+	Enable      schema.Enable      `json:"enable"`
 
+	ObjectId      schema.ObjectId      `json:"object_id"`
+	ObjectType    schema.ObjectType    `json:"object_type"`
+	WriteMode     schema.WriteMode     `json:"write_mode"`
+	WritePriority schema.WritePriority `json:"write_priority"`
+
+	PollPriority schema.PollPriority `json:"poll_priority"`
+	PollRate     schema.PollRate     `json:"poll_rate"`
+
+	MultiplicationFactor schema.MultiplicationFactor `json:"multiplication_factor"`
 	ScaleEnable          schema.ScaleEnable          `json:"scale_enable"`
 	ScaleInMin           schema.ScaleInMin           `json:"scale_in_min"`
 	ScaleInMax           schema.ScaleInMax           `json:"scale_in_max"`
 	ScaleOutMin          schema.ScaleOutMin          `json:"scale_out_min"`
 	ScaleOutMax          schema.ScaleOutMax          `json:"scale_out_max"`
 	Offset               schema.Offset               `json:"offset"`
-	MultiplicationFactor schema.MultiplicationFactor `json:"multiplication_factor"`
-	Fallback             schema.Fallback             `json:"fallback"`
 	Decimal              schema.Decimal              `json:"decimal"`
+	Fallback             schema.Fallback             `json:"fallback"`
+
+	HistoryEnable   schema.HistoryEnable   `json:"history_enable"`
+	HistoryType     schema.HistoryType     `json:"history_type"`
+	HistoryInterval schema.HistoryInterval `json:"history_interval"`
 }
 
 func GetPointSchema() *PointSchema {
