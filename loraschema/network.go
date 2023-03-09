@@ -10,7 +10,7 @@ type NetworkSchema struct {
 	Description    schema.Description    `json:"description"`
 	Enable         schema.Enable         `json:"enable"`
 	PluginName     schema.PluginName     `json:"plugin_name"`
-	SerialPort     schema.SerialPort     `json:"serial_port"`
+	SerialPort     schema.SerialPortLora `json:"serial_port"`
 	SerialBaudRate schema.SerialBaudRate `json:"serial_baud_rate"`
 }
 
