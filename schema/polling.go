@@ -40,10 +40,10 @@ type SlowPollRate struct {
 }
 
 type MaxPollRate struct {
-	Type     string `json:"type" default:"number"`
-	Title    string `json:"title" default:"Max Poll Rate (seconds)"`
-	Default  int    `json:"default" default:"0.1"`
-	ReadOnly bool   `json:"readOnly" default:"false"`
+	Type     string  `json:"type" default:"number"`
+	Title    string  `json:"title" default:"Max Poll Rate (seconds)"`
+	Default  float64 `json:"default" default:"0.1"`
+	ReadOnly bool    `json:"readOnly" default:"false"`
 }
 
 type ZeroMode struct {
