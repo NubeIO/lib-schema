@@ -14,6 +14,9 @@ type DeviceSchema struct {
 	DeviceMac                  schema.DeviceMac                  `json:"device_mac"`
 	MaxADPU                    MaxADPU                           `json:"max_adpu"`
 	Segmentation               Segmentation                      `json:"segmentation"`
+	FastPollRate               schema.FastPollRate               `json:"fast_poll_rate"`
+	NormalPollRate             schema.NormalPollRate             `json:"normal_poll_rate"`
+	SlowPollRate               schema.SlowPollRate               `json:"slow_poll_rate"`
 	AutoMappingEnable          schema.AutoMappingEnable          `json:"auto_mapping_enable"`
 	AutoMappingFlowNetworkName schema.AutoMappingFlowNetworkName `json:"auto_mapping_flow_network_name"`
 }
