@@ -55,6 +55,5 @@ func PrintJOSN(x interface{}) {
 }
 
 func main() {
-
 	PrintJOSN(GetDeviceSchema())
 }
