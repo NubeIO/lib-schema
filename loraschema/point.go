@@ -20,10 +20,10 @@ type PointSchema struct {
 	Decimal              schema.Decimal              `json:"decimal"`
 	Fallback             schema.Fallback             `json:"fallback"`
 
-	HistoryEnable     schema.HistoryEnable     `json:"history_enable"`
-	HistoryType       schema.HistoryType       `json:"history_type"`
-	HistoryInterval   schema.HistoryInterval   `json:"history_interval"`
-	AutoMappingEnable schema.AutoMappingEnable `json:"auto_mapping_enable"`
+	HistoryEnable     schema.HistoryEnable                `json:"history_enable"`
+	HistoryType       schema.HistoryType                  `json:"history_type"`
+	HistoryInterval   schema.HistoryInterval              `json:"history_interval"`
+	AutoMappingEnable schema.AutoMappingEnableDefaultTrue `json:"auto_mapping_enable"`
 }
 
 func GetPointSchema() *PointSchema {
