@@ -3,13 +3,13 @@ package loraschema
 import "github.com/NubeIO/lib-schema/schema"
 
 type DeviceSchema struct {
-	UUID              schema.UUID                         `json:"uuid"`
-	Name              schema.Name                         `json:"name"`
-	Description       schema.Description                  `json:"description"`
-	Enable            schema.Enable                       `json:"enable"`
-	AddressUUID       schema.AddressUUID                  `json:"address_uuid"`
-	Model             schema.Model                        `json:"model"`
-	AutoMappingEnable schema.AutoMappingEnableDefaultTrue `json:"auto_mapping_enable"`
+	UUID              schema.UUID              `json:"uuid"`
+	Name              schema.Name              `json:"name"`
+	Description       schema.Description       `json:"description"`
+	Enable            schema.Enable            `json:"enable"`
+	AddressUUID       schema.AddressUUID       `json:"address_uuid"`
+	Model             schema.Model             `json:"model"`
+	AutoMappingEnable schema.AutoMappingEnable `json:"auto_mapping_enable"`
 }
 
 func GetDeviceSchema() *DeviceSchema {

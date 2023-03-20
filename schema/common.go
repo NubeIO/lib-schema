@@ -77,7 +77,7 @@ type AutoMappingEnable struct {
 type AutoMappingEnableDefaultTrue struct {
 	Type     string `json:"type" default:"boolean"`
 	Title    string `json:"title" default:"auto mapping enable"`
-	Default  bool   `json:"default" default:"false"`
+	Default  bool   `json:"default" default:"true"`
 	ReadOnly bool   `json:"readOnly" default:"false"`
 }
 
