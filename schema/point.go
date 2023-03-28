@@ -43,12 +43,20 @@ type IoNumber struct {
 	ReadOnly bool     `json:"readOnly" default:"false"`
 }
 
+const (
+	IOTypeRaw        = "raw"
+	IOTypeTherm10kT2 = "thermistor_10k_type_2"
+	IOTypeDigital    = "digital"
+	IOTypeVDC        = "voltage_dc"
+	IOTypeCurrent    = "current"
+)
+
 type IoType struct {
 	Type     string   `json:"type" default:"string"`
 	Title    string   `json:"title" default:"IO Type"`
 	Options  []string `json:"enum" default:"[\"digital\",\"voltage_dc\",\"thermistor_10k_type_2\",\"current\",\"raw\"]"`
 	EnumName []string `json:"enumNames" default:"[\"digital\",\"voltage_dc\",\"thermistor_10k_type_2\",\"current\",\"raw\"]"`
-	Default  string   `json:"default" default:"digital"`
+	Default  string   `json:"default" default:"raw"`
 	ReadOnly bool     `json:"readOnly" default:"false"`
 }
 

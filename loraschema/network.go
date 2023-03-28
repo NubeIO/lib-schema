@@ -18,7 +18,6 @@ type NetworkSchema struct {
 
 func GetNetworkSchema() *NetworkSchema {
 	m := &NetworkSchema{}
-	m.SerialBaudRate.ReadOnly = true
 	schema.Set(m)
 	return m
 }
