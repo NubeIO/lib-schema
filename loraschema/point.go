@@ -28,9 +28,6 @@ type PointSchema struct {
 
 func GetPointSchema() *PointSchema {
 	m := &PointSchema{}
-	m.IoType.Default = "raw"
-	m.IoType.EnumName = []string{"raw", "thermistor_10k_type_2", "digital", "voltage_dc"}
-	m.IoType.Options = []string{"raw", "thermistor_10k_type_2", "digital", "voltage_dc"}
 	schema.Set(m)
 	return m
 }
