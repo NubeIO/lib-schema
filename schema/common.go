@@ -173,3 +173,13 @@ type AutoMappingEnableHistories struct {
 	Type  string `json:"type" default:"boolean"`
 	Title string `json:"title" default:"auto mapping enable histories"`
 }
+
+type OptionOneOf struct {
+	Const string `json:"const"`
+	Title string `json:"title"`
+}
+
+type OptionOneOfInt struct {
+	Const int    `json:"const"`
+	Title string `json:"title"`
+}
