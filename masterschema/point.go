@@ -8,10 +8,9 @@ type PointSchema struct {
 	Description schema.Description `json:"description"`
 	Enable      schema.Enable      `json:"enable"`
 
-	ObjectId      schema.ObjectId      `json:"object_id"`
-	ObjectType    schema.ObjectType    `json:"object_type"`
-	WriteMode     schema.WriteMode     `json:"write_mode"`
-	WritePriority schema.WritePriority `json:"write_priority"`
+	ObjectId   schema.ObjectId      `json:"object_id"`
+	ObjectType schema.ObjectType    `json:"object_type"`
+	WriteMode  BACnetPointWriteMode `json:"write_mode"`
 
 	PollPriority schema.PollPriority `json:"poll_priority"`
 	PollRate     schema.PollRate     `json:"poll_rate"`
@@ -36,4 +35,13 @@ func GetPointSchema() *PointSchema {
 	m := &PointSchema{}
 	schema.Set(m)
 	return m
+}
+
+type BACnetPointWriteMode struct {
+	Type     string   `json:"type" default:"string"`
+	Title    string   `json:"title" default:"Write Mode"`
+	Options  []string `json:"enum" default:"[\"read_only\",\"write_once_then_read\",\"write_always\"]"`
+	EnumName []string `json:"enumNames" default:"[\"read only\",\"write once then read\",\"write always\"]"`
+	Default  string   `json:"default" default:"read_only"`
+	ReadOnly bool     `json:"readOnly" default:"false"`
 }
