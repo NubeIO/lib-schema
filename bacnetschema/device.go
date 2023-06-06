@@ -11,6 +11,7 @@ type DeviceSchema struct {
 	FastPollRate      schema.FastPollRate                 `json:"fast_poll_rate"`
 	NormalPollRate    schema.NormalPollRate               `json:"normal_poll_rate"`
 	SlowPollRate      schema.SlowPollRate                 `json:"slow_poll_rate"`
+	DeviceTimeout     schema.TimeoutSecs                  `json:"device_timeout"`
 	AutoMappingEnable schema.AutoMappingEnableDefaultTrue `json:"auto_mapping_enable"`
 }
 
