@@ -51,3 +51,10 @@ type ZeroMode struct {
 	Title    string `json:"title" default:"Zero Mode"`
 	ReadOnly bool   `json:"readOnly" default:"false"`
 }
+
+type TimeoutSecs struct {
+	Type     string `json:"type" default:"number"`
+	Title    string `json:"title" default:"Timeout (seconds)"`
+	Default  int    `json:"default" default:"2"`
+	ReadOnly bool   `json:"readOnly" default:"false"`
+}
