@@ -19,6 +19,7 @@ type PointSchema struct {
 	ObjectId   schema.ObjectId `json:"object_id"`
 	ObjectType ObjectType      `json:"object_type"`
 
+	/*  TODO: THESE HAVE BEEN REMOVED UNTIL WE FIGURE OUT HOW BEST TO APPLY THEM TO BACNET POINTS
 	MultiplicationFactor schema.MultiplicationFactor `json:"multiplication_factor"`
 	ScaleEnable          schema.ScaleEnable          `json:"scale_enable"`
 	ScaleInMin           schema.ScaleInMin           `json:"scale_in_min"`
@@ -26,8 +27,9 @@ type PointSchema struct {
 	ScaleOutMin          schema.ScaleOutMin          `json:"scale_out_min"`
 	ScaleOutMax          schema.ScaleOutMax          `json:"scale_out_max"`
 	Offset               schema.Offset               `json:"offset"`
-	Decimal              schema.Decimal              `json:"decimal"`
-	Fallback             schema.Fallback             `json:"fallback"`
+	*/
+	Decimal  schema.Decimal  `json:"decimal"`
+	Fallback schema.Fallback `json:"fallback"`
 
 	HistoryEnable     schema.HistoryEnable                `json:"history_enable"`
 	HistoryType       schema.HistoryType                  `json:"history_type"`
