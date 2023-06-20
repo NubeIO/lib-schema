@@ -13,8 +13,7 @@ type NetworkSchema struct {
 		Options []schema.OptionOneOf `json:"oneOf"`
 		Help    string               `json:"help" default:"Select the network pair"`
 	} `json:"address_uuid"`
-	AutoMappingEnable          schema.AutoMappingEnable          `json:"auto_mapping_enable"`
-	AutoMappingFlowNetworkName schema.AutoMappingFlowNetworkName `json:"auto_mapping_flow_network_name"`
+	HistoryEnable schema.HistoryEnable `json:"history_enable"`
 }
 
 func GetNetworkSchema() *NetworkSchema {

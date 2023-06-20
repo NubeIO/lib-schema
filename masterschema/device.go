@@ -3,21 +3,21 @@ package masterschema
 import "github.com/NubeIO/lib-schema/schema"
 
 type DeviceSchema struct {
-	UUID              schema.UUID                         `json:"uuid"`
-	Name              schema.Name                         `json:"name"`
-	Description       schema.Description                  `json:"description"`
-	Enable            schema.Enable                       `json:"enable"`
-	Host              schema.Host                         `json:"host"`
-	Port              schema.Port                         `json:"port"`
-	DeviceObjectId    schema.DeviceObjectId               `json:"device_object_id"`
-	NetworkNumber     schema.NetworkNumber                `json:"network_number"`
-	DeviceMac         schema.DeviceMac                    `json:"device_mac"`
-	MaxADPU           MaxADPU                             `json:"max_adpu"`
-	Segmentation      Segmentation                        `json:"segmentation"`
-	FastPollRate      schema.FastPollRate                 `json:"fast_poll_rate"`
-	NormalPollRate    schema.NormalPollRate               `json:"normal_poll_rate"`
-	SlowPollRate      schema.SlowPollRate                 `json:"slow_poll_rate"`
-	AutoMappingEnable schema.AutoMappingEnableDefaultTrue `json:"auto_mapping_enable"`
+	UUID           schema.UUID                     `json:"uuid"`
+	Name           schema.Name                     `json:"name"`
+	Description    schema.Description              `json:"description"`
+	Enable         schema.Enable                   `json:"enable"`
+	Host           schema.Host                     `json:"host"`
+	Port           schema.Port                     `json:"port"`
+	DeviceObjectId schema.DeviceObjectId           `json:"device_object_id"`
+	NetworkNumber  schema.NetworkNumber            `json:"network_number"`
+	DeviceMac      schema.DeviceMac                `json:"device_mac"`
+	MaxADPU        MaxADPU                         `json:"max_adpu"`
+	Segmentation   Segmentation                    `json:"segmentation"`
+	FastPollRate   schema.FastPollRate             `json:"fast_poll_rate"`
+	NormalPollRate schema.NormalPollRate           `json:"normal_poll_rate"`
+	SlowPollRate   schema.SlowPollRate             `json:"slow_poll_rate"`
+	HistoryEnable  schema.HistoryEnableDefaultTrue `json:"history_enable"`
 }
 type Segmentation struct {
 	Type     string   `json:"type" default:"string"`

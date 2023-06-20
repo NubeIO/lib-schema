@@ -23,16 +23,15 @@ type AutoMappingNetworksSelection struct {
 }
 
 type NetworkSchema struct {
-	UUID                       schema.UUID                       `json:"uuid"`
-	Name                       schema.Name                       `json:"name"`
-	Description                schema.Description                `json:"description"`
-	Enable                     schema.Enable                     `json:"enable"`
-	Port                       schema.Port                       `json:"port"`
-	Interface                  schema.Interface                  `json:"network_interface"`
-	PluginName                 schema.PluginName                 `json:"plugin_name"`
-	MaxPollRate                schema.MaxPollRate                `json:"max_poll_rate"`
-	AutoMappingEnable          schema.AutoMappingEnable          `json:"auto_mapping_enable"`
-	AutoMappingFlowNetworkName schema.AutoMappingFlowNetworkName `json:"auto_mapping_flow_network_name"`
+	UUID          schema.UUID          `json:"uuid"`
+	Name          schema.Name          `json:"name"`
+	Description   schema.Description   `json:"description"`
+	Enable        schema.Enable        `json:"enable"`
+	Port          schema.Port          `json:"port"`
+	Interface     schema.Interface     `json:"network_interface"`
+	PluginName    schema.PluginName    `json:"plugin_name"`
+	MaxPollRate   schema.MaxPollRate   `json:"max_poll_rate"`
+	HistoryEnable schema.HistoryEnable `json:"history_enable"`
 }
 
 func GetNetworkSchema() *NetworkSchema {

@@ -43,7 +43,7 @@ type DeviceSchema struct {
 		Default  string `json:"default" default:""`
 		ReadOnly bool   `json:"readOnly" default:"false"`
 	} `json:"manufacture"`
-	AutoMappingEnable schema.AutoMappingEnableDefaultTrue `json:"auto_mapping_enable"`
+	HistoryEnable schema.HistoryEnableDefaultTrue `json:"history_enable"`
 }
 
 func GetDeviceSchema() *DeviceSchema {

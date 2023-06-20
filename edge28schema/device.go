@@ -3,13 +3,13 @@ package edge28schema
 import "github.com/NubeIO/lib-schema/schema"
 
 type DeviceSchema struct {
-	UUID              schema.UUID                         `json:"uuid"`
-	Name              schema.Name                         `json:"name"`
-	Description       schema.Description                  `json:"description"`
-	Enable            schema.Enable                       `json:"enable"`
-	Host              schema.Host                         `json:"host"`
-	Port              schema.Port                         `json:"port"`
-	AutoMappingEnable schema.AutoMappingEnableDefaultTrue `json:"auto_mapping_enable"`
+	UUID          schema.UUID                     `json:"uuid"`
+	Name          schema.Name                     `json:"name"`
+	Description   schema.Description              `json:"description"`
+	Enable        schema.Enable                   `json:"enable"`
+	Host          schema.Host                     `json:"host"`
+	Port          schema.Port                     `json:"port"`
+	HistoryEnable schema.HistoryEnableDefaultTrue `json:"history_enable"`
 }
 
 func GetDeviceSchema() *DeviceSchema {

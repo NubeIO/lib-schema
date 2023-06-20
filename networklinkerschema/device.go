@@ -11,7 +11,7 @@ type DeviceSchema struct {
 		Options []schema.OptionOneOf `json:"oneOf"`
 		Help    string               `json:"help" default:"address_uuid"`
 	} `json:"address_uuid"`
-	AutoMappingEnable schema.AutoMappingEnableDefaultTrue `json:"auto_mapping_enable"`
+	HistoryEnable schema.HistoryEnableDefaultTrue `json:"history_enable"`
 }
 
 func GetDeviceSchema() *DeviceSchema {

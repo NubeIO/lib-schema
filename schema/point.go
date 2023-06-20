@@ -122,12 +122,6 @@ type Decimal struct {
 	ReadOnly bool    `json:"readOnly" default:"false"`
 }
 
-type HistoryEnable struct {
-	Type    string `json:"type" default:"boolean"`
-	Title   string `json:"title" default:"History Enable"`
-	Default bool   `json:"default" default:"false"`
-}
-
 type HistoryType struct {
 	Type    string   `json:"type" default:"string"`
 	Title   string   `json:"title" default:"History Type"`

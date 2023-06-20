@@ -67,26 +67,18 @@ type Enable struct {
 	ReadOnly bool   `json:"readOnly" default:"false"`
 }
 
-type AutoMappingEnable struct {
+type HistoryEnable struct {
 	Type     string `json:"type" default:"boolean"`
-	Title    string `json:"title" default:"auto mapping enable"`
+	Title    string `json:"title" default:"history enable"`
 	Default  bool   `json:"default" default:"false"`
 	ReadOnly bool   `json:"readOnly" default:"false"`
 }
 
-type AutoMappingEnableDefaultTrue struct {
+type HistoryEnableDefaultTrue struct {
 	Type     string `json:"type" default:"boolean"`
-	Title    string `json:"title" default:"auto mapping enable"`
+	Title    string `json:"title" default:"history enable"`
 	Default  bool   `json:"default" default:"true"`
 	ReadOnly bool   `json:"readOnly" default:"false"`
-}
-
-type AutoMappingFlowNetworkName struct {
-	Type     string   `json:"type" default:"string"`
-	Title    string   `json:"title" default:"auto mapping flow_network name"`
-	Options  []string `json:"enum" default:"[]"`
-	Help     string   `json:"help" default:"select flow networks"`
-	ReadOnly bool     `json:"readOnly" default:"false"`
 }
 
 type Product struct {
